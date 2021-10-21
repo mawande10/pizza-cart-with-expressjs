@@ -1,0 +1,28 @@
+<div class="order container center m-3 p-3">
+    {{!-- <form action="/orderaction/{{order_id}}" method="post"> --}}
+    <div class="carttable ">
+        <table class="center">
+            <thead class="order_head">
+                <tr >
+                    <td>Id</td>
+                    <td>Amont</td>
+                     <td>Status</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each orders}}
+                <tr>
+        
+                    <td>{{order_id}}</td>
+                    <td>{{payment}}</td>
+                    <td>{{order_status}}</td>
+                    <td ><a href="/orderaction/{{order_id}} " class="orderaction">{{order_status}}</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+            
+        </table>
+    </div>
+   {{!-- </form> --}}
+</div>

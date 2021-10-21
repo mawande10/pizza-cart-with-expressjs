@@ -1,0 +1,134 @@
+
+<div class="">
+    
+    
+    <div class=" m-1 p-1 cart center">
+        <div class="cart-header">
+            <h5>Shopping Cart</h5>
+        </div>
+        {{!-- <div class="intro-order">
+            <p style="color: #EF476F;">Please make a new order!</p>
+
+        </div> --}}
+
+        <div class="container cart-wrap {{hid}}">
+           <form action="/refresh" method="post">
+                <i class="fa fa-refresh refresh" aria-hidden="true"></i>
+            <input class="refresh" type="submit" value="clear">
+           </form>
+            <div class="headingC" style="background-color: #FFCA3A ;">
+                <div>TYPE</div>
+                <div>QTY</div>
+                <div>PRICE</div>
+                <div>DO</div>
+            </div>
+            <div class="2nd">
+                <div>Small</div>
+                <div>{{sqt}}</div>
+                <div>R{{small}}</div>
+                <div><form action="/add_small" method="post">
+                    <input type="submit" name="smalladd" value="+">
+                </form>
+                <form action="/minus_small" method="post">
+                    <input type="submit" name="smallminus" value="-">
+                </form>
+                </div>
+            </div>
+            <div class="3rd">
+                <div>Medium</div>
+                <div>{{mqt}}</div>
+                <div>R{{medium}}</div>
+                <div><form action="/add_medium" method="post">
+                    <input type="submit" name="smalladd" value="+">
+                </form>
+                <form action="/minus_medium" method="post">
+                    <input type="submit" name="smallminus" value="-">
+                </form>
+                </div>
+            </div>
+            <div class="3rd">
+            <div>Large</div>
+            <div>{{lqt}}</div>
+            <div>R{{large}}</div>
+            <div><form action="/add_large" method="post">
+                    <input type="submit" name="smalladd" value="+">
+                </form>
+                <form action="/minus_large" method="post">
+                    <input type="submit" name="smallminus" value="-">
+                </form>
+            </div>
+        </div>
+        
+<form action="/order" method="post">
+    <div class="total">
+    <p class="hide" >Total = <span  class="totalCkeckout "><span>R{{gtotal}}</span></span></p>
+    <input class="totalpar center totalCkeckout" type="text" name="gtotal" value="{{gtotal}}">
+</div>
+
+<div class="cart-button ">
+    <button class="btn checkout center" type="submit">CHECKOUT</button>
+</div>
+</form>
+
+
+
+</div>
+
+<div class="message hide">
+    <p class="enjoy">ENJOY!!!</p>
+</div>
+</div>
+
+
+
+
+
+<div class="row  center pizza">
+    <form action="/buyaction" method="post">
+        <div class="col-4 small">
+            <img src="pizza-one.jpg" width= "100" alt="">
+            <h5>Small</h5>
+            <h2>R49</h2>
+            <p class="container">
+            <h5>available in:</h5>
+            Beef,
+            cheese and
+            chicken
+            try out our special sauce pizza which will make you questions your taste buds out of exitement
+            </p>
+            <button class="buyBtnSmall" name="buybtn" {{dis1}} type="submit" value="smallBtn">BUY</button>
+        </div>
+        <div class="col-4 large">
+            <img src="pizza-one.jpg" width= "125" alt="">
+            <h5>Medium</h5>
+            <h2>R89</h2>
+            <p class="div">
+            <h5>available in:</h5>
+            Beef,
+            cheese and
+            chicken
+            try out our special sauce pizza which will make you questions your taste buds out of exitement
+            </p>
+            <button class="buyBtnMedium" name="buybtn" {{dis2}} type="submit" value="mediumBtn">BUY</button>
+
+        </div>
+        <div class="col-4 medium">
+            <img src="pizza-one.jpg" width="150" alt="">
+            <h5>Large</h5>
+            <h2>R129</h2>
+            <p class="div">
+            <h5>available in:</h5>
+
+            Beef,
+            cheese and
+            chicken
+            try out our special sauce pizza which will make you questions your taste buds out of exitement
+            </p>
+            <button class="buyBtnLarge" name="buybtn" {{dis3}} type="submit" value="largeBtn">BUY</button>
+
+        </div>
+    </form>
+</div>
+
+
+</div>
